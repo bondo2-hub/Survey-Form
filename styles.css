@@ -1,0 +1,191 @@
+/* Basic Reset for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes loadIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0)
+    }
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: rgb(71, 120, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#survey-form {
+    margin-top: 20px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    animation: loadIn 0.75s;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-group div {
+    margin-top: 5px;
+}
+
+.form-group input[type='text'],
+.form-group input[type='email'],
+.form-group input[type='number'],
+.form-group select,
+textarea {
+    width: 600px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+textarea {
+    height: auto;
+}
+
+.form-group label {
+    color: #555;
+    font-weight: 600;
+}
+
+.form-group input[type='text']:hover,
+.form-group input[type='email']:hover,
+.form-group input[type='number']:hover,
+.form-group select:hover,
+textarea:hover {
+    border-color: #888;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input[type='text']:focus,
+.form-group input[type='email']:focus,
+.form-group input[type='number']:focus,
+.form-group select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #696969;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="none" stroke="%23666" stroke-width="1px" d="M2 0 L0 2 L2 4 L4 2 Z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 10px 10px;
+    padding-right: 30px;
+}
+
+.form-group select option { 
+    opacity: 0; 
+    animation: dropdown 0.5s ease forwards; 
+} 
+    
+    @keyframes dropdown {
+        0% {
+            opacity: 0; 
+            transform: translateY(-10px); 
+        }
+        100% { 
+            opacity: 1;
+             transform: translateY(0); 
+        }
+    }
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.radio-group div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type='radio'] {
+    margin-right: 10px;
+    accent-color: #333;
+}
+
+.radio-group label {
+    color: #555;
+    font-size: 14px;
+}
+
+.header h1 {
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.header {
+    animation: loadIn 0.75s;
+}
+
+.header p {
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin-top: -15px;
+}
+
+#comments {
+    resize: vertical;
+    width: 600px;
+}
+
+#submit {
+    width: 600px;
+    background-color: rgb(71, 120, 255);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
+    background-color: rgb(50, 90, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
